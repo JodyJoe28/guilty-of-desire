@@ -1,6 +1,6 @@
 const reveals = document.querySelectorAll(".reveal");
 
-window.addEventListener("scroll", () => {
+function revealSections() {
   reveals.forEach((section) => {
     const sectionTop = section.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
@@ -9,4 +9,7 @@ window.addEventListener("scroll", () => {
       section.classList.add("active");
     }
   });
-});
+}
+
+window.addEventListener("scroll", revealSections);
+window.addEventListener("load", revealSections);
