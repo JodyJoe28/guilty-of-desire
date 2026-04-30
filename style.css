@@ -4,44 +4,138 @@
   box-sizing: border-box;
 }
 
-body {
-  background: #0a0a0a;
-  color: white;
-  font-family: 'Segoe UI', sans-serif;
+html {
+  scroll-behavior: smooth;
 }
 
+body {
+  background: #050505;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* HERO */
 .hero {
   height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.95)),
+    radial-gradient(circle at center, #2b2108, #000 60%);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 20px;
+  justify-content: center;
   text-align: center;
 }
 
+.hero-content {
+  animation: fadeUp 1.5s ease forwards;
+}
+
+.eyebrow {
+  color: gold;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
 h1 {
-  font-size: 70px;
-  letter-spacing: 6px;
-  text-transform: uppercase;
+  font-size: 4rem;
+  letter-spacing: 5px;
 }
 
-p {
-  color: #c9a45c;
-  font-size: 20px;
+.tagline {
+  margin: 20px 0 35px;
+  opacity: 0.7;
 }
 
-button {
-  padding: 14px 40px;
-  border: 1px solid #c9a45c;
-  background: transparent;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
+/* BUTTONS */
+.main-btn,
+.pay-btn {
+  display: inline-block;
+  padding: 14px 30px;
+  border: 1px solid gold;
+  color: gold;
+  text-decoration: none;
   transition: 0.3s ease;
 }
 
-button:hover {
-  background: #c9a45c;
+.main-btn:hover,
+.pay-btn:hover {
+  background: gold;
   color: black;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,215,0,0.4);
+}
+
+/* SECTIONS */
+.section,
+.products {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.section h2,
+.products h2 {
+  color: gold;
+  margin-bottom: 20px;
+}
+
+/* PRODUCTS */
+.product-grid {
+  max-width: 1000px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  border: 1px solid rgba(255,215,0,0.3);
+  padding: 30px;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  border-color: gold;
+}
+
+/* SCROLL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1s;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* FOOTER */
+footer {
+  padding: 30px;
+  text-align: center;
+  opacity: 0.6;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
 }
