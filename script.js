@@ -1,5 +1,12 @@
-document.getElementById("enterBtn").addEventListener("click", function() {
-  document.querySelector(".next-section").scrollIntoView({
-    behavior: "smooth"
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+  reveals.forEach((section) => {
+    const sectionTop = section.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (sectionTop < windowHeight - 100) {
+      section.classList.add("active");
+    }
   });
 });
