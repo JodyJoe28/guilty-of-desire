@@ -1,70 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Guilty of Desire</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | Guilty of Desire</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+<body class="signup-body">
 
-<body>
+  <section class="signup-page">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <p class="eyebrow">A Luxury Experience</p>
-      <h1>Guilty of Desire</h1>
-      <p class="tagline">Luxury. Mystery. Desire.</p>
-      <a href="#collection" class="main-btn">Enter the Collection</a>
+    <div class="signup-hero">
+      <h1 class="smoke-title">Guilty of Desire</h1>
+      <p class="signup-subtitle">Create your account to enter the experience.</p>
     </div>
+
+    <form class="signup-form" id="signupForm">
+      <input type="text" id="name" placeholder="Enter your name" required>
+      <input type="tel" id="phone" placeholder="Enter your phone number" required>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <button type="submit" class="glow-signup-button">Sign Up</button>
+    </form>
+
   </section>
-
-  <!-- BRAND -->
-  <section class="section reveal">
-    <h2>The Brand</h2>
-    <p>
-      Built for those who move different. Guilty of Desire blends elegance,
-      mystery, and temptation into one luxury experience.
-    </p>
-  </section>
-
-  <!-- PRODUCTS -->
-  <section id="collection" class="products reveal">
-    <h2>Featured Collection</h2>
-
-    <div class="product-grid">
-      <div class="product-card">
-        <h3>Desire Drop</h3>
-        <p>Exclusive luxury release.</p>
-        <a href="https://buy.stripe.com/test_link" class="pay-btn">Shop Now</a>
-      </div>
-
-      <div class="product-card">
-        <h3>Midnight Edition</h3>
-        <p>Dark, elegant, limited.</p>
-        <a href="https://buy.stripe.com/test_link" class="pay-btn">Buy Now</a>
-      </div>
-
-      <div class="product-card">
-        <h3>Signature Piece</h3>
-        <p>The statement item.</p>
-        <a href="https://buy.stripe.com/test_link" class="pay-btn">Order Now</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FINAL SECTION -->
-  <section class="section reveal">
-    <h2>Luxury Is a Feeling</h2>
-    <p>
-      Every detail is designed to feel rare, bold, and unforgettable.
-    </p>
-  </section>
-
-  <footer>
-    <p>© 2026 Guilty of Desire</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+@media (max-width: 768px) {
+  .smoke-title {
+    font-size: 38px;
+    letter-spacing: 3px;
+  }
+
+  .signup-form {
+    padding: 25px;
+  }
+
+  .signup-subtitle {
+    font-size: 13px;
+  }
+<
